@@ -1,0 +1,13 @@
+.tile{
+    border:solid 2px blue;
+    display:flex;
+    flex-direction:column;
+    background-color: lightskyblue;
+    text-align: center;
+    margin-left: 30px;
+    height:45vh;
+    width:12vw;
+    border-radius: 5%;
+    color:white;
+
+}
