@@ -86,8 +86,17 @@ function App() {
               humidity={weather.main.humidity}
               feels={weather.main.feels_like}
               winds={weather.wind.speed}
-            />             
+            />,             
+            <Forecast 
+              className="forecast-data"
+              temp={newForecast}
+              min={newForecast}
+              max={newForecast}
+              humidity={newForecast}
+              feels={newForecast}
+              winds={newForecast}
 
+              />
             }
         </div>
       </div>
