@@ -7,7 +7,7 @@ import { faCouch, faHouseDamage } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   let f=[]
-  const API_KEY='4310ac6417f9c11a133cf58220ab3cd9';
+  const API_KEY='';
   const [city,setCity] = useState();
   const [weather, setWeather] = useState([]);
   const [forecast, setForecast] = useState([])
@@ -49,7 +49,6 @@ function App() {
       }
     }
     newForecast.push(f)
-    
   } 
 
   const updateSearch = (e)=>{
