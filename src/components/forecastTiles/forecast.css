@@ -4,15 +4,24 @@
     flex-direction:column;
     background-color: lightskyblue;
     text-align: center;
-    margin-left: 5vw;
+    margin-left: 2vw;
     height:350px;
     width:150px;
     border-radius: 15px;
     color:white;
     
 }
-Vtemp{
-    margin-left:20px;
+.weatherModel{
+ 
+}
+.tile:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
+.widget-container{
+    display:flex;
+    justify-content: center;
 }
 p{
     margin-bottom:0;

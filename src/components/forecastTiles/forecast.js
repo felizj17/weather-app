@@ -3,18 +3,24 @@ import background_rain from '../images/rain.jpg';
 import background_clear from '../images/clear.jpg';
 import background_cloudy from '../images/cloudy.jpg';
 import background_partly_cloudy from '../images/partly_cloudy.jpg';
+import partly_cloudy from '../images/partly_cloudy.png';
+import rain from '../images/rain.png';
+import clear from '../images/clear.png';
+import thunderstorm from '../images/thunderstorm.png';
+
 import './forecast.css';
 
 export default function Forecast(props){
     const [backgroundImage, setBackgroundImage] = useState();
+    const [widget, setWidget] = useState();
     useEffect(()=>{imageSelector(props.overcast);},[props.overcast])
     const imageSelector=(overcast)=>{
         console.log(props.overcast)
         switch(overcast){
-          case 'Rain':setBackgroundImage(background_rain);break;
-          case 'Clouds':setBackgroundImage(background_cloudy);break;
-          case 'Clear':setBackgroundImage(background_clear);break;
-          default: setBackgroundImage(background_partly_cloudy);break;
+          case 'Rain':setBackgroundImage(background_rain); setWidget(rain);break;
+          case 'Clouds':setBackgroundImage(background_cloudy);setWidget(partly_cloudy);break;
+          case 'Clear':setBackgroundImage(background_clear);setWidget(clear);break;
+          default: setBackgroundImage(background_partly_cloudy);setWidget(thunderstorm);break;
         }
       }
     return( 
@@ -31,7 +37,11 @@ export default function Forecast(props){
                 </div>
                 <h3>Humidity: {Math.round(props.humidity)}</h3>
                 <h3>Feels Like: {Math.round(props.feels)}</h3>
-
+                <br></br>
+                <div className="widget-container">
+                    <img src={widget} className="weather_model" />
+                </div>
+                
             </div>
         </div>
     );

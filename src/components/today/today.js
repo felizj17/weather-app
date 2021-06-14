@@ -3,18 +3,24 @@ import background_rain from '../images/rain.jpg';
 import background_clear from '../images/clear.jpg';
 import background_cloudy from '../images/cloudy.jpg';
 import background_partly_cloudy from '../images/partly_cloudy.jpg';
+import partly_cloudy from '../images/partly_cloudy.png';
+import rain from '../images/rain.png';
+import clear from '../images/clear.png';
+import thunderstorm from '../images/thunderstorm.png';
+
 import './today.css';
 
 
 export default function Today(props){
     const [backgroundImage, setBackgroundImage] = useState();
+    const [widget, setWidget] = useState();
     useEffect(()=>{imageSelector(props.overcast);},[props.overcast])
     const imageSelector=(overcast)=>{
         switch(overcast){
-          case 'Rain':setBackgroundImage(background_rain);break;
-          case 'Clouds':setBackgroundImage(background_cloudy);break;
-          case 'Clear':setBackgroundImage(background_clear);break;
-          default: setBackgroundImage(background_partly_cloudy);break;
+          case 'Rain':setBackgroundImage(background_rain); setWidget(rain);break;
+          case 'Clouds':setBackgroundImage(background_cloudy);setWidget(partly_cloudy);break;
+          case 'Clear':setBackgroundImage(background_clear);setWidget(clear);break;
+          default: setBackgroundImage(background_partly_cloudy);setWidget(thunderstorm);break;
         }
       }
 
@@ -32,6 +38,9 @@ export default function Today(props){
             <p className="today-text">Humidity:{Math.round(props.humidity)}%</p>
             <p className="today-text">Feels Like:{Math.round(props.feels)}°</p>
             <p className="today-text">Wind Speed:{Math.round(props.winds)}</p>
+            <div className="widget-container">
+                    <img src={widget} className="weather_model" />
+            </div>
         </div>
     );
 }

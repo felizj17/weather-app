@@ -3,14 +3,14 @@ import React, {useState, useEffect} from 'react';
 import Forecast from './components/forecastTiles/forecast'
 import Today from './components/today/today'
 import './App.css';
-import { auto } from 'async';
+
 
 function App() {
 
   let f=[];
   /*set your api key here 
   example: 
-  const API_KEY='ebwoueueboqbeo'*/
+  const API_KEY='Your_Api_Key'*/
   const API_KEY='';
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('London');
@@ -21,7 +21,8 @@ function App() {
   const [check2,setCheck2] = useState(Boolean)
 
   useEffect(()=>{getWeather();},[query]);
-  useEffect(()=>{setNewForecast(forecast);},[newForecast]);
+  useEffect(()=>{formatForecast(forecast);},[forecast]);
+  useEffect(()=>{setCheck(weather.length !== 0);},[weather])
   
   const getWeather = async() =>{ 
     try{
