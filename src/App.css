@@ -1,16 +1,44 @@
 body{
-  background-color:lightskyblue;
-
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(47,212,160,1) 100%);
 }
-.tiles{
+.forecast{
   display:flex;
   flex-direction: row;
-  margin-top:20vh;
+  justify-content:center;
+  margin-bottom: 10px;
+  
+}
+.forecast-data{
+  display:flex;
+  flex-direction: row;
+  margin-top:10px;
   justify-content: space-evenly;
 }
 .topHalf{
+
   text-align: center;
+  margin:10px;
+  border-radius: 15px;
 }
 #citySelector{
   width: 40vw;
+}
+.today{
+  color:Blue;
+ }
+.container{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  
+}
+.today-data{
+  height: 100px;
+  width:200px;
+  margin:20px;
+  text-align: center;
+}
+.searchBtn{
+  width:5vw;
 }
