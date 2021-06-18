@@ -1,3 +1,8 @@
+To start sign up at openweathermap.org and place your private api key in the variable REACT_APP_API_KEY inside the .env.example file.
+You can then change the name of the file to .env
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

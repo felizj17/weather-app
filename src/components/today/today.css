@@ -9,9 +9,13 @@ h3{
     margin:0;
 }
 .today-text{
-    margin-bottom: 4px;
+    margin-bottom: 1vw;
     padding:0px;
     text-align: center;
+}
+.today-wrapper{
+    border-radius: 5px;
+    background-color: rgba(17, 153, 135, 0.3);
 }
 .min_max{
     display:flex;
@@ -19,17 +23,16 @@ h3{
     color:grey;
     justify-content:center;
 }
-.Vtemp1{
+.low-temp{
     margin-left:20px;
 }
 .today{
-    
-    height: 400px;
-    width: 700px;
-    background-size: cover;
+    height: auto;
+    width: 660px;
+    border:solid gold 2px;
     
 }
-.weather_model{
-    height: 120px;
+.weather-model{
+    height: 90px;
     width:auto;
 }

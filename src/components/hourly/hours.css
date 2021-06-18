@@ -1,0 +1,25 @@
+.hours{
+  display:flex;
+  flex-direction: row;
+  border-top:gold solid 1px;
+}
+.time{
+  height:80px;
+  margin-right:40px;  
+  margin-left: 20px;
+  }
+.weather-model-mini{
+  width:80px;
+  height:auto;   
+                                                           
+}
+.widget{
+ float:right;
+ position:absolute;
+ right:20px;
+ 
+}
+#overcast{
+  position:absolute;
+  left:90px;
+}

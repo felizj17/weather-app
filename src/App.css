@@ -1,13 +1,16 @@
 body{
-  background: rgb(2,0,36);
-background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(47,212,160,1) 100%);
-}
+  background: rgb(12,208,210);
+background: linear-gradient(0deg, rgba(12,208,210,1) 0%, rgba(222,223,22,1) 100%);}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////// */
 .forecast{
   display:flex;
   flex-direction: row;
   justify-content:center;
-  margin-right:1vw;
-  margin-bottom: 10px;
+  margin-bottom:20px;
   
 }
 .forecast-data{
@@ -17,7 +20,6 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgb
   justify-content: space-evenly;
 }
 .topHalf{
-
   text-align: center;
   margin:10px;
   border-radius: 15px;
@@ -26,19 +28,48 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgb
   width: 40vw;
 }
 .today{
-  color:Blue;
+  color:white;
  }
 .container{
   display:flex;
   justify-content: center;
   margin-bottom: 10px;
-  
+  margin-left:10px;
+}
+#left-half{
+  margin-left:-450px;
+  padding:20px;
+}
+#right-half{
+  background-color: white;
 }
 .today-data{
-
   text-align: center;
 }
 .searchBtn{
-  background-color: turquoise;
-  color:white;
+  background-color:rgba(47,212,160,.25) ;
+  color:white ;
+}
+.hourly-data{
+  position: absolute;
+  margin-left:10px;
+  width: 450px;
+  border: solid gold 2px;
+  border-radius: 5px;
+  background-color:rgba(17, 153, 135, 0.6);
+  height:auto;
+  color:rgba(0,0,0,.65);
+}
+.title{
+  text-align: center;
+}
+#main{
+  display:flex;
+  flex-direction: row;
+
+  /* position: absolute; */
+  justify-content: center;
+  
+  
+ 
 }

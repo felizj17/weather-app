@@ -1,21 +1,27 @@
-.tile{
-    border:solid 2px blue;
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.forecast-tile{
+    border:solid 2px gold;
     display:flex;
     flex-direction:column;
-    background-color: lightskyblue;
     text-align: center;
-    margin-left: 2vw;
-    height:350px;
-    width:150px;
-    border-radius: 15px;
+    margin-left: 10px;
+    height:auto;
+    width:155px;
+    border-radius: 5px;
     color:white;
-    
+    background-color: rgba(17, 153, 135, 0.3);
 }
-.weatherModel{
- 
+.forecast-tile-wrapper{
+    height:auto;
+    width:155px;
+    border-radius: 5px;
+    background-color: rgba(17, 153, 135, 0.3);
 }
-.tile:hover{
-    transform:scale(1.1);
+.forecast-tile:hover{
+    transform:scale(1.05);
     cursor:pointer;
 }
 
@@ -23,6 +29,7 @@
     display:flex;
     justify-content: center;
 }
+
 p{
     margin-bottom:0;
     margin-top:0;
